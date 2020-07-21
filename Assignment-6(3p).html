@@ -1,0 +1,35 @@
+<!--Generated from HTML Code Play-->
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<mark>Using await, async, promise, fetch</mark>
+<br>
+ <script>
+const url = 'https://jsonplaceholder.typicode.com/todos/1';
+async function getData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
+const callGetData = async () => {
+    try {
+        const data = await getData()
+        console.log(data);        
+    } catch (error) {
+        console.log("Something gone wrong")        
+    }
+}
+callGetData();
+</script>
+</body>
+</html>
+<!--Generated from HTML Code Play.
+ More application
+ Android Code Play
+ SQL Code Play-->

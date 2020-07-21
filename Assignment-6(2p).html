@@ -1,0 +1,73 @@
+<!--Generated from HTML Code Play-->
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<mark>OOPS : creating classes</mark>
+<br>
+<script>
+class User{
+constructor(name,age,email){
+this.name=name; 
+this.age=age; 
+this.email=email;
+}
+login()
+{
+document.write(`You have logged in with email id ${this.email} <br>`)
+}
+logout(){
+document.write(`You have logged out just now <br>`)
+}
+}
+class Moderator extends User{
+constructor(name,age,email,coins){
+super(name,age,email)
+this.coins=0
+}
+addCoins(){
+this.coins++
+document.write(`After adding you have ${this.coins} coins <br>`)
+}
+removeCoins(){
+this.coins--
+document.write(`After removing you have ${this. coins} coins <br>`);
+}
+}
+class Admin extends Moderator {
+constructor(name,age,email,coins,course){
+super(name,age,email,coins)
+this.course=[];
+}
+addCourse(coursename){
+this.course.push(coursename);
+document.write(`After adding courseList is ${this.course}<br>`)
+}
+deleteCourse(coursename){
+this.course=this.course.filter(i=>i!=coursename)
+document.write(`After deleting a course the course list is ${this.course}<br>`)
+}
+
+}
+var obj=new Admin("himaja","10","family. Com")
+obj.login()
+obj.addCoins()
+obj.addCoins()
+obj.addCoins()
+obj.removeCoins()
+obj.addCourse("php")
+obj.addCourse("python")
+obj.addCourse("javascript")
+obj.deleteCourse("php")
+obj.logout()
+</script>
+</body>
+</html>
+<!--Generated from HTML Code Play.
+ More application
+ Android Code Play
+ SQL Code Play-->

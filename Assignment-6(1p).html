@@ -1,0 +1,35 @@
+<!--Generated from HTML Code Play-->
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function odd(){
+var a; 
+var arr=[]
+while (a != " "){
+a =Number(prompt("Enter positive number"),"");
+arr.push(a);
+}
+arr.pop();
+document.write("original array is "+arr);
+var newArr=arr.filter(i=>(i%2)!=0);
+document.write("<br> the filtered array "+newArr)
+var finalArr=newArr.map(i=>i**3)
+document.write("<br>final array : cube of odd numbers is "+finalArr)
+}
+</script>
+</head>
+
+<body>
+
+ <button type="button" onclick="odd();">Using map and filter methods</button>
+
+</body>
+
+</html>
+<!--Generated from HTML Code Play.
+ More application
+ Android Code Play
+ SQL Code Play-->
